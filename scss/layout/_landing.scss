@@ -1,0 +1,15 @@
+@use "../abstract/breakpoints";
+html {
+  height: 100vh;
+}
+body {
+  background-color: var(--clr-accent-200);
+  background-image: url(/images/bg-mobile.svg);
+  @include breakpoints.medium {
+    background-image: url(/images/bg-desktop.svg);
+    background-position: center;
+  }
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+}

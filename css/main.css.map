@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"main.css"}
+{"version":3,"sourceRoot":"","sources":["../main.scss","../scss/abstract/_colors.scss","../scss/layout/_landing.scss","../scss/abstract/_breakpoints.scss","../scss/utilities/_flex.scss"],"names":[],"mappings":"AAKQ;ACER;EAGM;EAAA;;;ACTN;EACE;;;AAEF;EACE;EACA;EAKA;EACA;EACA;;ACAA;EDTF;IAII;IACA;;;;AETJ;EACE;EACA;EACA;;;AAGF;EACE","file":"main.css"}

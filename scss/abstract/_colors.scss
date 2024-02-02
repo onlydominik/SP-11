@@ -1,0 +1,14 @@
+$colors: (
+  "accent": (
+    100: hsl(300, 69%, 71%),
+    200: hsl(257, 40%, 49%),
+  ),
+);
+
+:root {
+  @each $category, $subcategory in $colors {
+    @each $name, $value in $subcategory {
+      --clr-#{$category}-#{$name}: #{$value};
+    }
+  }
+}
