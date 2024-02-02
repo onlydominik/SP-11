@@ -2,14 +2,17 @@
 html {
   height: 100vh;
 }
-body {
-  background-color: var(--clr-accent-200);
-  background-image: url(/images/bg-mobile.svg);
-  @include breakpoints.medium {
-    background-image: url(/images/bg-desktop.svg);
-    background-position: center;
+html {
+  background: var(--clr-accent-200) url(/images/bg-mobile.svg) no-repeat top
+    fixed;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  @include breakpoints.small {
+    background: var(--clr-accent-200) url(/images/bg-desktop.svg) no-repeat
+      center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
   }
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top;
 }
