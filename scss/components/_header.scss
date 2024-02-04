@@ -1,0 +1,17 @@
+header {
+  margin: 0 auto;
+  width: clamp(10rem, 90%, var(--size-500));
+  background-color: red;
+  height: 49pt;
+  display: flex;
+}
+
+.logo {
+  display: flex;
+
+  background-image: url(../images/logo.svg);
+  background-position: left;
+  width: 264px;
+  height: 49pt;
+  background-size: 264px;
+}
