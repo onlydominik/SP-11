@@ -3,13 +3,13 @@ html {
   height: 100vh;
 }
 body {
-  background: var(--clr-accent-200) url(./images/bg-mobile.svg) no-repeat top;
+  background: var(--clr-accent-200) url(../images/bg-mobile.svg) no-repeat top;
   background-size: contain;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
   @include breakpoints.small {
-    background: var(--clr-accent-200) url(./images/bg-desktop.svg) no-repeat
+    background: var(--clr-accent-200) url(../images/bg-desktop.svg) no-repeat
       center;
     background-size: cover;
     -webkit-background-size: cover;
