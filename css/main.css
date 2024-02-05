@@ -10,6 +10,7 @@
 :root {
   --fw-400: 400;
   --fw-600: 600;
+  --fs-400: 0.875rem;
   --fs-500: 1rem;
   --fs-600: 1.0625rem;
   --fs-700: 1.25rem;
@@ -25,9 +26,7 @@
   font-size: 100%;
 }
 
-*:where(
-    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
-  ) {
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
   all: unset;
   display: revert;
 }
@@ -59,14 +58,14 @@ img {
 /* revert for bug in Chromium browsers
      - fix for the content editable attribute will work properly.
      - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
-:where([contenteditable]:not([contenteditable="false"])) {
+:where([contenteditable]:not([contenteditable=false])) {
   -moz-user-modify: read-write;
   -webkit-user-modify: read-write;
   overflow-wrap: break-word;
 }
 
 /* apply back the draggable feature - exist only in Chromium and Safari */
-:where([draggable="true"]) {
+:where([draggable=true]) {
   -webkit-user-drag: element;
 }
 
@@ -251,7 +250,7 @@ html {
 }
 
 body {
-  background: var(--clr-accent-200) url(/images/bg-mobile.svg) no-repeat top;
+  background: var(--clr-accent-200) url(./images/bg-mobile.svg) no-repeat top;
   background-size: contain;
   -webkit-background-size: contain;
   -moz-background-size: contain;
@@ -259,8 +258,7 @@ body {
 }
 @media (min-width: 60em) {
   body {
-    background: var(--clr-accent-200) url(/images/bg-desktop.svg) no-repeat
-      center;
+    background: var(--clr-accent-200) url(./images/bg-desktop.svg) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
