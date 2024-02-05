@@ -1,17 +1,28 @@
+@use "../abstract/breakpoints";
 header {
   margin: 0 auto;
-  width: clamp(10rem, 90%, var(--size-500));
-  background-color: red;
-  height: 49pt;
+  width: clamp(10rem, 85%, var(--size-500));
+  height: 3rem;
   display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  @include breakpoints.small {
+    width: clamp(10rem, 85%, var(--size-600));
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
 }
 
 .logo {
-  display: flex;
+  background: url(../images/logo.svg) no-repeat left;
+  width: clamp(50px, 100%, 7.5rem);
+  height: 2.5rem;
+  margin-left: -5px;
+  background-size: 100%;
+  cursor: pointer;
 
-  background-image: url(../images/logo.svg);
-  background-position: left;
-  width: 264px;
-  height: 49pt;
-  background-size: 264px;
+  @include breakpoints.small {
+    width: clamp(50px, 100%, 10rem);
+  }
 }

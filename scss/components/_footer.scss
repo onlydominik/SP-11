@@ -1,0 +1,58 @@
+@use "../abstract/breakpoints";
+footer {
+  width: 100%;
+  margin: var(--size-300) 0;
+
+  @include breakpoints.small {
+    width: clamp(10rem, 85%, var(--size-600));
+    margin: 0 auto;
+  }
+}
+
+.community {
+  gap: 10px;
+  & li {
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 0.44rem;
+    width: 2rem;
+    height: 2rem;
+    &:hover {
+      border: 1px solid var(--clr-accent-100);
+      transition: all 100ms;
+      cursor: pointer;
+    }
+  }
+  @include breakpoints.small {
+    justify-content: end !important;
+  }
+}
+
+.item {
+  display: inline-block;
+  cursor: pointer;
+  &:focus-visible {
+    outline: 2px solid var(--clr-accent-100);
+    border-radius: 50%;
+    color: black;
+  }
+}
+
+@mixin icon($url) {
+  background: url($url) no-repeat center;
+  width: 1rem;
+  height: 1rem;
+  background-size: contain;
+}
+
+.item--fb {
+  @include icon("../images/facebook-icon.svg");
+}
+
+.item--twitter {
+  @include icon("../images/twitter-icon.svg");
+}
+
+.item--instagram {
+  @include icon("../images/instagram-icon.svg");
+}

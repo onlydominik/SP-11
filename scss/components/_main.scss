@@ -1,0 +1,15 @@
+@use "../abstract/breakpoints";
+main {
+  margin: 0 auto;
+  width: clamp(10rem, 85%, var(--size-500));
+  text-align: center;
+  & img {
+    max-width: 100%;
+    margin: var(--size-200) 0;
+  }
+  @include breakpoints.small {
+    grid-template-columns: 1fr 1fr;
+    width: clamp(10rem, 85%, var(--size-600));
+    gap: 3rem;
+  }
+}

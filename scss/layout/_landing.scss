@@ -11,6 +11,7 @@ body {
   @include breakpoints.small {
     background: var(--clr-accent-200) url(/images/bg-desktop.svg) no-repeat
       center;
+    background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
